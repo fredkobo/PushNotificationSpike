@@ -5,7 +5,77 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+    <EditText
+        android:id="@+id/usernameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/usernameHint"
+        android:layout_above="@+id/passwordText"
+        android:layout_alignParentEnd="true" />
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/passwordHint"
+        android:inputType="textPassword"
+        android:layout_above="@+id/buttonLogin"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginButton"
+        android:onClick="login"
+        android:layout_above="@+id/toggleButtonGCM"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="WNS on"
+        android:textOff="WNS off"
+        android:id="@+id/toggleButtonWNS"
+        android:layout_toLeftOf="@id/toggleButtonGCM"
+        android:layout_centerVertical="true" />
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="GCM on"
+        android:textOff="GCM off"
+        android:id="@+id/toggleButtonGCM"
+        android:checked="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="APNS on"
+        android:textOff="APNS off"
+        android:id="@+id/toggleButtonAPNS"
+        android:layout_toRightOf="@id/toggleButtonGCM"
+        android:layout_centerVertical="true" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNotificationMessageTag"
+        android:layout_below="@id/toggleButtonGCM"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/notification_message_tag_hint" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNotificationMessage"
+        android:layout_below="@+id/editTextNotificationMessageTag"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/notification_message_hint" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_button"
+        android:id="@+id/sendbutton"
+        android:onClick="sendNotificationButtonOnClick"
+        android:layout_below="@+id/editTextNotificationMessage"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
