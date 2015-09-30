@@ -1,16 +1,13 @@
 package za.co.spikesolutions.pushnotifications;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Base64;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import com.google.android.gms.gcm.*;
-import com.microsoft.windowsazure.messaging.*;
 import com.microsoft.windowsazure.notifications.NotificationsManager;
 
 import android.view.View;
@@ -32,7 +29,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     private String SENDER_ID = "833216622679";
     private GoogleCloudMessaging gcm;
